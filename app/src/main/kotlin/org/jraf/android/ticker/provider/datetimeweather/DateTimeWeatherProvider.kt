@@ -75,7 +75,7 @@ class DateTimeWeatherProvider : Provider {
         val weatherResult = forecastIoClient.weather
 
         // French Revolutionary Calendar
-        val frcDate = FrenchRevolutionaryCalendar(Locale.FRENCH, FrenchRevolutionaryCalendar.CalculationMethod.ROMME).getDate(GregorianCalendar.getInstance() as GregorianCalendar?)
+        val frcDate = FrenchRevolutionaryCalendar(Locale.FRENCH, FrenchRevolutionaryCalendar.CalculationMethod.ROMME).getDate(GregorianCalendar.getInstance() as GregorianCalendar)
         val frcDateStr = mContext.getString(R.string.frc_date, frcDate.weekdayName, frcDate.dayOfMonth, frcDate.monthName, frcDate.year)
         val frcObjectStr = mContext.getString(R.string.frc_object, frcDate.objectTypeName, frcDate.dayOfYear)
 
